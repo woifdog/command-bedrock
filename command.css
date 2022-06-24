@@ -1,0 +1,72 @@
+.command-div {
+    border-radius: 5px;
+    width: 26.2;
+    background-color: grey;
+    padding: 0px;
+}
+.command {
+    font-family: Changa;
+    background-color: rgb(214, 214, 214);
+    padding: 10px;
+    border-radius: 10px;
+    width: 70%;
+    margin: 10px;
+}
+div {
+    display:block;
+}
+.input {
+    font-family: Changa;
+    background-color: rgb(214, 214, 214);
+    padding: 10px;
+    border-radius: 10px;
+    width: 70%;
+    margin: 10px;
+}
+.button {
+    display: inline;
+    width: 49.5%;
+    height: 60px;
+    background-color: rgb(221, 217, 217);
+    border-radius: 10px;
+    padding: 10px;
+    font-weight: bold;
+}
+.button:hover {
+    background-color: rgb(100, 97, 97);
+}
+.commandblock {
+    display: inline;
+    background-color: aqua;
+    border: solid 3px black;
+    border-radius: 10px;
+    width: 200px;
+    text-decoration: none;
+    color: black;
+    height: 50px;
+    font-size: 200%; 
+    margin-top: 10px;
+    border-radius:inherit;
+}
+body{
+    background-color: #bbb;
+}
+.btn {
+    display: inline;
+}
+.commandbutton {
+    display: inline;
+    width: 70px;
+    height: 46px;
+    background-color: #bbb;
+    border-radius: 10px;
+    padding: 10px;
+    font-weight: bold;
+}
+@media screen and (max-width:600px) {
+    head{font-size: 24px;}
+    .content{width: 100%;text-align: center;}
+}
+.content {
+    width:1000px;margin-left: auto;margin-right: auto;
+}

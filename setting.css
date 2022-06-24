@@ -1,0 +1,43 @@
+.install {
+    display: inline-block;
+    font-weight: 400;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: aqua;
+    border: 1px solid transparent;
+    padding: 10px;
+    font-size: 150%;
+    border-radius: 10px;
+    font-size: 300%;
+    margin-left: 100px;
+}
+.div {
+    width: auto;
+    background-color: aqua;
+    height: 50px;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    font-size: 200%;
+}
+.menu {
+    width: auto;
+    background-color: white;
+}
+.menu-top{
+    width: 50px;
+    height: 20%;
+    border-right: solid #ACC0D8 1px;
+}
+body {
+    font-size: calc(16px + (18 - 15) * ((100vw - 300px) / (1440 - 300)));
+}
+@media screen and (max-width:600px) {
+    head{font-size: 15px;}
+    .content{width: 100%;text-align: center;}
+}
+.content {
+    width:1000px;margin-left: auto;margin-right: auto;
+}

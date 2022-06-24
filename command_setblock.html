@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel=icon type="image/x-icon" href="image/commands.ico"/>
+        <link rel="stylesheet" href="command.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+        <script src="command_setblock.js"></script>
+        <body>
+            <div style="background-color: skyblue; width:auto; height: 200px; display: flex; align-items: center; justify-content: center; font-size: 300%;">clear 指令生成器</div>
+            <title>setblock生成器</title>
+            <!-- 指令 -->
+            <h1 class="commandtext">指令預覽</h1>
+            <div class="command-div" style="height: 100px;">
+                <br>
+                <p class="command" id="cmdtext">/setblock</p>
+            </div>
+            <h1 class="commandtext">座標設置</h1>
+            <div class="command-div" style="height: 200px;">
+            <p class="commandtext" style="display:inline; font-size: 150%;">x</p> <input type="text" class="command" id="x1">
+            <br><p class="commandtext" style="display:inline; font-size: 150%;">y</p> <input type="text" class="command" id="y1">
+            <br><p class="commandtext" style="display:inline; font-size: 150%;">z</p> <input type="text" class="command" id="z1">
+            </div>
+            <h1 class="commandtext">物品設置</h1>
+            <div class="command-div" style="height: 300px;">
+                <h2 class="commandtext">物品名稱</h2>
+                <input type="text" class="command" id="item_name">
+                <h2 class="commandtext">物品data</h2>
+                <input type="text" class="command" id="item_data">
+            </div>
+            <h1 class="commandtext">模式選擇</h1>
+            <div class="command-div" style="height: 100px;">
+                <select id="item_mode" class="command">
+                    <option value="">無選擇</option>
+                    <option value="outline">outline 包圍</option>
+                    <option value="keep">keep 保留</option>
+                    <option value="destroy">destroy 破壞</option>
+                    <option value="holloe">hollow 中空</option>
+                </select>
+            </div>
+            <button class="button" onclick="click_add()">生成指令</button>
+            <button class="button" onclick="copy('cmdtext')">一鍵複製</button>
+            <button class="button" onclick="kill()">一鍵刪除</button>
+            <a class="commandblock" href="index.html">主頁</a>
+        </body>
+    </head>
+</html>

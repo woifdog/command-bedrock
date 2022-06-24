@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head lang="zh-TW">
+        <link rel=icon type="image/x-icon" href="image/commands.ico"/>
+        <link rel="stylesheet" href="command.css">
+        <body>
+            <title>json指令</title>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+            <div style="background-color: skyblue; width:auto; height: 200px; display: flex; align-items: center; justify-content: center; font-size: 300%;">titleraw/tellraw Json指令生成器</div>
+            <!-- 指令 -->
+            <h1 class="commandtext">指令效果區</h1>
+            <div class="command-div" style="height:100px;">
+                <br>
+            <p class="cmd_text command" id="cmd_text2" style="position: relative; top:3">指令效果區</p>
+            </div>
+            <h1 class="commandtext">指令預覽</h1>
+            <div class="command-div" style="height:100px;">
+                <br>
+            <p class="input cmd_text" id="cmd_text">{"rawtext":[]}</p>
+            </div>
+            <div class="command-div input_box" style="height:700px">
+            <h2 class="commadtext">添加文字(支援\n和§)</h2>
+            <br>
+            <input placeholder="輸入文字" type="text" class="command" id="input_text"> <button class="commandbutton" onclick="TextButton()">添加</button>
+            <br>
+            <div class="input_box2">
+                <h2 class="commandtext">添加記分板(目標實體，記分板)</h2>
+                <input type="text" class="command" style="width:200px" id="input_scores" placeholder="輸入目標實體" > <input placeholder="輸入記分板名稱" type="text" class="sign_text command" id="input_scores2" style="width:200px"> <button class="commandbutton" onclick="ScoresButton()">添加</button>
+                </div>
+                <br>
+                <div class="input_box">
+                    <h2 class="commandtext">添加實體名</h2>
+                    <input type="text" class="command" id="input_name" placeholder="輸入實體名稱">
+                    <button class="commandbutton" onclick="NameButton()">添加</button>
+                </div>
+                <div class="input_box">
+                    <h2 class="commandtext">動作:</h2>
+                    <button class="commandbutton" onclick="back()">刪除上個</button>
+                    <button class="commandbutton" onclick="allded()">刪除全部</button>
+                    <button class="commandbutton" onclick="copyText('cmd_text')">一鍵複製</button>
+                </div>
+                <div class="input_box">
+                    <h2 class="commandtext">指令類型</h2>
+                    <select id="setting" class="command" onchange="titleraw()">
+                        <option>未選擇</option>
+                        <option value="set1">titleraw actionbar</option>
+                        <option value="set2">tellraw @a</option>
+                        <option value="set3">tellraw @p</option>
+                    </select>
+                    <br>
+                    <a href="index.html" class="commandblock" style="padding:6px;">主頁</a>
+                </div>
+            </div>
+        </body>
+    </head>
+</html>
+<script src="command_titleraw.js"></script>

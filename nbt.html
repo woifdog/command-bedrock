@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<head>
+    <link rel=icon type="image/x-icon" href="image/commands.ico"/>
+    <link rel="stylesheet" href="command.css">
+    <body>
+        <html>
+            <title>NBT 物品設定</title>
+            <script src="nbt.js"></script>
+            <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+            <div style="background-color: skyblue; width:auto; height: 200px; display: flex; align-items: center; justify-content: center; font-size: 300%;">NBT 生成器</div>
+            <!-- 指令 -->
+            <list>
+            <h1 class="commandtext">NBT預覽</h1>
+            <div class="command-div" style="height:100px">
+                <br>
+            <p class="command" id="cmdtext">{}</p>
+            </div>
+            <h1 class="commandtext">NBT設定(選填):</h1>
+            <div class="input, command-div" style="height: 400px;">
+            <h2 class="commandtext">可放置方塊ID:</h2>
+            <input type="name" id="input_can_place" class="command">
+            <h2 class="commandtext">可破壞方塊ID:</h2>
+            <input type="name" id="input_can_destroy" class="command">
+            <br>
+            <input type="checkbox"  id="no_drop">
+            <p style="font-size: 100%; display: inline;" id="commandtext">開啟死亡不掉落</p>
+            <p class="commandtext">鎖定於</p>
+            <select id="back_change" class="command">
+            <option value="no">不鎖定</option>
+            <option value="one">鎖在一格</option>
+            <option value="back">鎖在背包</option>
+        </div>
+        </list>
+        </select>
+        <strong><input type="button" value="生成指令" class="button" onclick="generate()"></strong>
+        <strong><input type="button" value="一鍵複製" class="button" onclick="copy('cmd_text')"></strong>
+        <Strong><input type="button" value="一鍵刪除" class="button" onclick="kill()"></Strong>
+        </html>
+        <a href="index.html" class="commandblock">主頁</a>
+    </body>
+</head>

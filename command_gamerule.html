@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel=icon type="image/x-icon" href="image/commands.ico"/>
+        <link rel="stylesheet" href="command.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+        <body>
+            <title>gamerule指令生成器</title>
+            <script src="command_gamerule.js"></script>
+            <div style="background-color: skyblue; width:auto; height: 200px; display: flex; align-items: center; justify-content: center; font-size: 300%;">gamerule指令生成器</div>
+            <!-- 指令 -->
+            <h1 class="commandtext">指令預覽:</h1>
+            <div class="command-div" style="height: 100px;">
+                <br>
+                <p class="command" id="cmdtext">/gamerule</p>
+            </div>
+            <h1 class="commandtext">遊戲規則(常用)</h1>
+            <div class="command-div" style="height: 140px;">
+                <select id="mode" class="command">
+                    <option value="commandBlocksEnabled">指令方塊是否開啟</option>
+                    <option value="commandBlockoutput">指令方塊執行時是否顯示在聊天室</option>
+                    <option value="doFireTick">火是否蔓延或自然熄滅</option>
+                    <option value="doMobLoot">生物死亡時是否掉落物品</option>
+                    <option value="falldamage">	玩家是否承受跌落傷害</option>
+                    <option value="firedamage">	玩家是否承受火焰傷害</option>
+                    <option value="keepInventory">是否開啟防噴</option>
+                    <option value="mobGriefing">生物是否破壞(防爆)</option>
+                    <option value="pvp">是否開啟打架</option>
+                    <option value="tntExplodes">tnt是否會爆炸</option>
+                </select>
+            </div>
+            <br>
+            <br>
+            <h1 class="commandtext">布林值</h1>
+            <div class="command-div" style="height:140px">
+                <select id="boolean" class="command">
+                    <option value="true">true 是</option>
+                    <option value="false">false 否</option>
+                </select>
+            </div>
+            <button class="button" onclick="click_add()">生成指令</button>
+            <button class="button" onclick="copy_Text('cmdtext')">一鍵複製</button>
+            <button class="button" onclick="kill()">一鍵刪除</button>
+            <a href="index.html" class="commandblock">主頁</a>
+        </body>
+    </head>
+</html>

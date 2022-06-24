@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel=icon type="image/x-icon" href="image/commands.ico"/>
+        <body>
+            <title>give指令生成器</title>
+            <link rel="stylesheet" href="command.css">
+            <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+            <link rel="stylesheet" href="index.css">
+            <div style="background-color: skyblue; width:auto; height: 200px; display: flex; align-items: center; justify-content: center; font-size: 300%;">give指令生成器</div>
+            
+            <!-- 指令預覽 -->
+            <div class="command-div" style="height: 100px;">
+                <list>
+                    <p class="commandtext" style="font-size: 20px; margin: 10px; font-weight: bold;">指令預覽:</p>
+                    <h3 class="command" id="cmd_text">/give</h3>
+                    <br>
+                    <br>
+                    <br>
+                    <h1 class="commandtext">物品設定</h1>
+                    <!-- 物品設置 -->
+                    <div class="input, command-div" style="height: 400px;">
+                        <h2 class="commandtext">物品名稱:</h2>
+                            <input type="name" class="command" id="input_item_id">
+                        <br>
+                        <h2 class="commandtext">物品數量:</h2>
+                            <input type="number" class="command" id="input_item_count">
+                        <br>
+                        <h2 class="commandtext">物品數據值:</h2>
+                        <input type="number" class="command" id="input_item_data">
+                    </div>
+                    <br>
+                    <br>
+                    <br>
+                    <h1 class="commandtext">目標選擇器</h1>
+                    <div class="input, command-div" style="height: 200px;">
+                    <h2 class="commandtext">選擇器:</h2>
+                    <select id="input_target" class="command">
+                        <option value="@s">@s 自己</option>
+                        <option value="@a">@a 所有玩家</option>
+                        <option value="@p">@p 最近玩家</option>
+                        <option value="@r">@r 隨機玩家</option>
+                    </select>
+                    </div>
+                    <h1 class="commandtext">NBT設定(選填):</h1>
+                    <div class="input, command-div" style="height: 400px;">
+                    <h2 class="commandtext">可放置方塊ID:</h2>
+                    <input type="name" id="input_can_place" class="command">
+                    <h2 class="commandtext">可破壞方塊ID:</h2>
+                    <input type="name" id="input_can_destroy" class="command">
+                    <br>
+                    <input type="checkbox"  id="no_drop">
+                    <p style="font-size: 100%; display: inline;" id="commandtext">開啟死亡不掉落</p>
+                    <p class="commandtext">鎖定於</p>
+                    <select id="back_change" class="command">
+                    <option value="no">不鎖定</option>
+                    <option value="one">鎖在一格</option>
+                    <option value="back">鎖在背包</option>
+                </div>
+                </list>
+                </select>
+                <br>
+                <br>
+                <btn class="command-div">
+                <strong><input type="button" value="生成指令" class="button" onclick="generate()"></strong>
+                  <strong><input type="button" value="一鍵複製" class="button" onclick="copy('cmd_text')"></strong>
+                  <Strong><input type="button" value="一鍵刪除" class="button" onclick="kill()"></Strong>
+                  <!-- 按鈕設計 -->
+                  <a href="index.html" class="commandblock" style="padding:6px;">主頁</a>
+                </div>
+            </btn>
+        </body>
+    </head>
+</html>
+<script src="command_give.js"></script>

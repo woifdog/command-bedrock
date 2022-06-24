@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head lang="zh-TW">
+        <link rel=icon type="image/x-icon" href="image/commands.ico"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+        <link rel="stylesheet" href="command.css">
+        <script src="command_gamemode.js"></script>
+            <title>gamemode 指令生成器</title>
+        </head>
+
+        <body>
+            <div style="background-color: skyblue; width:auto; height: 200px; display: flex; align-items: center; justify-content: center; font-size: 300%;">gamemode 指令生成器</div>
+            <!-- 指令 -->
+            <h1 class="commandtext">指令預覽</h1>
+            <div class="command-div" style="height: 100px;">
+                <br>
+                <p class="command" id="cmdtext">/gamemode</p>
+            </div>
+            <h1 class="commandtext">模式設定</h1>
+            <div class="command-div" style="height: 100px;">
+                <select id="mode" class="command">
+                    <option value="5">預設</option>
+                    <option value="1">創造</option>
+                    <option value="0">生存</option>
+                    <option value="2">冒險</option>
+                    <option value="6">旁觀者</option>
+                </select>
+            </div>
+            <h1 class="commandtext">目標選擇器</h1>
+            <div class="command-div" style="height: 200px;">
+            <select class="command" id="sele">
+                <option value="@s">@s 自己</option>
+                <option value="@a">@a 全部玩家</option>
+                <option value="@r">@r 隨機玩家</option>
+                <option value="@p">@p 最近玩家</option>
+            </select>
+            <h2 class="commandtext">標籤名</h2>
+            <input type="text" id="tag" class="command">
+            </div>
+            <button class="button" onclick="click_add()">生成指令</button>
+            <button class="button" onclick="copy('cmdtext')">一鍵複製</button>
+            <button class="button" onclick="kill()">一鍵刪除</button>
+            <a href="index.html" class="commandblock">主頁</a>
+     </body>
+</html>
